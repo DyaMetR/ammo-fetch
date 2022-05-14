@@ -5,8 +5,6 @@
 	counts for client-side displaying.
 ]]--------------------------------------------------------------------
 
-if SERVER then return end
-
 local version = 1 -- current version of the script
 
 -- check whether there's a newer version of this script
