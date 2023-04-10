@@ -1,6 +1,6 @@
 --[[------------------------------------------------------------------
 	DyaMetR's ammunition fetch
-	May 14th, 2022
+	April 10th, 2023
 	Functions that simplify the process of retrieving player ammunition
 	counts for client-side displaying.
 ]]--------------------------------------------------------------------
@@ -113,20 +113,6 @@ function Player:GetSecondaryAmmoDisplay()
 
 	-- check if primary ammunition displayed has been replaced
 	if weapon:GetPrimaryAmmoType() <= 0 then return false end
-
-	-- check whether it's a SWEP with a custom ammo display
-	if weapon:IsScripted() then
-		local custom = weapon:CustomAmmoDisplay()
-
-		-- use custom ammo display if valid
-		if custom then
-			-- check whether the custom display has secondary ammo
-			if not custom.SecondaryAmmo or custom.SecondaryAmmo < 0 then return false end
-
-			-- otherwise, return it
-			return custom.Draw, 0, custom.SecondaryAmmo, 0
-		end
-	end
 
 	-- check if active weapon has secondary ammunition
 	local ammo = weapon:GetSecondaryAmmoType()

@@ -1,5 +1,8 @@
 # Ammunition Fetch
 
+![](https://img.shields.io/github/v/release/DyaMetR/ammo-fetch)
+![](https://img.shields.io/github/issues/DyaMetR/ammo-fetch)
+
 ## A tool to aid in developing ammunition displays.
 
 ### How to install
